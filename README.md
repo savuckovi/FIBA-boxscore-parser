@@ -2,6 +2,6 @@ Simple script to transform FIBA Boxscore into format for publishing on your webs
 
 Script reads given url (boxscore from FIBA webpage) and outputs game result and sorted scorers from both teams.
 
-Created ih PHP, adapted to Croatian language (added special caracters è,æ,,š,ğ and changed country names).
+Created ih PHP, adapted to Croatian language (added special characters Ä,Ä‡,Å¾,Å¡,Ä‘ changed country names).
 
 Can be improved by outputing more than just points for each player or adapting the script to work with other basketaball boxscores, not just FIBA's.
