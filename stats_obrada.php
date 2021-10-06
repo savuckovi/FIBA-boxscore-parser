@@ -151,9 +151,9 @@
 		//print_r($prva_ekipa);
 		//echo "<br>";
 		
-		$kriva_slova = array("Spain", "Croatia", "Mkd", "Bosnia And Herzegovina", "Montenegro", "Serbia", "Lithuania", 
+		$kriva_slova = array("Spain", "Croatia", "Bosnia And Herzegovina", "Montenegro", "Serbia", "Lithuania", 
 							"Dominican Republic", "Jamaica", "Mexico", "Canada", "Puerto Rico", "Uruguay"); 
-		$prava_slova = array("Španjolska", "Hrvatska", "Makedonija", "Bosna i Hercegovina", "Crna Gora", "Srbija", "Litva", 
+		$prava_slova = array("Španjolska", "Hrvatska", "Bosna i Hercegovina", "Crna Gora", "Srbija", "Litva", 
 							"Dominikanska Republika", "Jamajka", "Meksiko", "Kanada", "Portoriko", "Urugvaj"); 
 		
 		
