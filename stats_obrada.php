@@ -6,7 +6,7 @@
 		//dobijem - http://www.fibalivestats.com/matches/18/08/85/68/69ctqSKrBvzQ/
 
 		$dom = new DOMDocument();
-		if (@$dom->loadHTMLFile($url)) {
+		if ($dom != '' && @$dom->loadHTMLFile($url)) {
 			
 			$finder = new DomXPath($dom);
 			$klasa="boxS";
@@ -28,7 +28,7 @@
 
 					if ($r->nodeType == XML_ELEMENT_NODE)
 					{
-						if ($r->getAttribute("class") == "final")
+						if ($r->getAttribute("class") != null && $r->getAttribute("class") == "final")
 						{
 							$rezA = $r->nodeValue;
 							break;
