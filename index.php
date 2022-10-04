@@ -23,7 +23,7 @@
 		</table>
 		<br>
 		<br>
-		<span>Source: <a href="http://www.fiba.com/pages/eng/fe/14/wcm/p/asid/6584/eid//sid/6584/schedule.html">FIBA</a></span>
+		<span>Source: <a href="https://www.fiba.basketball/europe/u20/2022/games">FIBA Basketball</a></span>
 	</div>
 	
 </body>
