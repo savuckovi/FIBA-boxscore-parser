@@ -64,15 +64,12 @@
 							break;
 						}
 					}
-				}
-				
-				//echo "per4: " . $per4;
-				//echo "per5: " . $per5;
-				//echo "per6: " . $per6;
+				}			
 				
 				break;
 			}
-			
+
+			//used only for debugging. for now, keep in commented-out
 			//echo "(" . $per1 . ":" . $per4 . ", " . ($per1+$per2) . ":" . ($per4+$per5) . ", " . ($per1+$per2+$per3) . ":" . ($per4+$per5+$per6) . ") <br>";
 			
 			$br = 0;
@@ -173,7 +170,7 @@
 		$kriva_slova = array("Bogdanovic", "Zoric", "Ukic ", "Saric", "Rudez", "Tomic", "Mccalebb ", "Gechevski", "Samardziski", "Sehovic", 
 						"Vucevic", "Dasic", "Dubljevic", "Popovic", "Ivanovic", "Sekulic", "Nedovic", "Krstic", "Micic","Markovic","Kalinic", 
 						"Djordje","Gagic","Andjusic","Katic","Stimac","Masic","Sutalo","Bavcic","Gordic","Kikanovic","Teletovic","Dedovic", 
-						"Stipanovic"); 
+						"Stipanovic", "Hezonja", "Zubac", "Saric", "Marckinkovic"); 
 		
 		$prava_slova = array("Bogdanović", "Žorić", "Ukić", "Šarić", "Rudež", "Tomić", "McCalebb ", "Gečevski", "Samardžiski", "Šehović", 
 						"Vučević", "Dašić", "Dubljević", "Popović", "Ivanović", "Sekulić", "Nedović", "Krstić", "Micić", "Marković", "Kalinić", 
