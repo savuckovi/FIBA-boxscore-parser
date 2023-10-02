@@ -174,8 +174,7 @@
 		
 		$prava_slova = array("Bogdanović", "Žorić", "Ukić", "Šarić", "Rudež", "Tomić", "McCalebb ", "Gečevski", "Samardžiski", "Šehović", 
 						"Vučević", "Dašić", "Dubljević", "Popović", "Ivanović", "Sekulić", "Nedović", "Krstić", "Micić", "Marković", "Kalinić", 
-						"Đorđe", "Gagić", "Anđušić", "Katić","Štimac","Mašić","Šutalo","Bavčić","Gordić","Kikanović","Teletović","Đedović", 
-						"Stipanović"); 
+						"Đorđe", "Gagić", "Anđušić", "Katić","Štimac","Mašić"); 
 		
 		$ispis1 = "<strong>" . $tim1 . "</strong>: ";
 		foreach ($prva_ekipa as $k=>$v){
