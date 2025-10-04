@@ -3,7 +3,6 @@
 <textarea rows="30" cols="100" name="tekst">
 	<?php 
 		$url = $_POST["link"];
-		//dobijem - http://www.fibalivestats.com/matches/18/08/85/68/69ctqSKrBvzQ/
 
 		$dom = new DOMDocument();
 		if ($dom != '' && @$dom->loadHTMLFile($url)) {
@@ -36,9 +35,6 @@
 					}
 					
 				}
-				//echo "per1: " . $per1;
-				//echo "per2: " . $per2;
-				//echo "per3: " . $per3;
 			}
 			
 			$klasa="scoreB";
@@ -68,9 +64,6 @@
 				
 				break;
 			}
-
-			//used only for debugging. for now, keep in commented-out
-			//echo "(" . $per1 . ":" . $per4 . ", " . ($per1+$per2) . ":" . ($per4+$per5) . ", " . ($per1+$per2+$per3) . ":" . ($per4+$per5+$per6) . ") <br>";
 			
 			$br = 0;
 			$prva_ekipa = array();
@@ -103,11 +96,7 @@
 					if (strlen($kos->nodeValue)<7 && $kos->nodeValue != "0")
 					{
 						$tmp[trim($ime,"*")] = $kos->nodeValue;
-					}
-					
-					/*$drugi = $prvi->parentNode->nextSibling->firstChild->nextSibling->nextSibling;
-					
-					echo "drugi: " . $drugi->nodeValue;*/
+					}			
 					
 					$dalje = $prvi->parentNode;
 					
@@ -145,8 +134,6 @@
 		
 		}
 		arsort($prva_ekipa);
-		//print_r($prva_ekipa);
-		//echo "<br>";
 		
 		$kriva_slova = array("Spain", "Croatia", "Bosnia And Herzegovina", "Montenegro", "Serbia", "Lithuania", 
 							"Dominican Republic", "Jamaica", "Mexico", "Canada", "Puerto Rico", "Uruguay"); 
@@ -163,8 +150,6 @@
 		$tim1 = str_replace($kriva_slova, $prava_slova, $tim1);
 		$tim2 = str_replace($kriva_slova, $prava_slova, $tim2);
 		
-		//<h3 class="rezultat">Ekipa - Ekipa 100:95 <span>(četvrtine)</span></h3>
-		
 		echo "<hr /> \n \n<h3 class=\"rezultat\">" . $tim1 . " - " . $tim2 . " ". $rezA . ":" . $rezB . " <span>(" . $per1 . ":" . $per4 . ", " . ($per1+$per2) . ":" . ($per4+$per5) . ", " . ($per1+$per2+$per3) . ":" . ($per4+$per5+$per6) . ")</span></h3>\n\n";
 		
 		$kriva_slova = array("Bogdanovic", "Zoric", "Ukic ", "Saric", "Rudez", "Tomic", "Mccalebb ", "Gechevski", "Samardziski", "Sehovic", 
@@ -179,7 +164,6 @@
 		$ispis1 = "<strong>" . $tim1 . "</strong>: ";
 		foreach ($prva_ekipa as $k=>$v){
 			$exp = explode(".",$k);
-			// $str = substr($str, 1);
 			$trim = substr($exp[1], 2);
 			
 			$ispis1 .= ucwords(strtolower($trim)) . " " . $v . ", ";
@@ -188,7 +172,6 @@
 		echo substr($ispis1,0,-2);
 		echo "\n\n";
 		arsort($druga_ekipa);
-		//print_r($druga_ekipa);
 		
 		
 		$ispis2 = "<strong>" . $tim2 . "</strong>: ";
