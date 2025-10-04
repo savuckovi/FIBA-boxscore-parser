@@ -2,9 +2,18 @@
 
 <textarea rows="30" cols="100" name="tekst">
 	<?php 
-		$url = $_POST["link"];
+		$url = filter_var($_POST["link"], FILTER_VALIDATE_URL);
+		if (!$url) {
+		    echo "Invalid URL provided.";
+		    exit;
+		}
 
 		$dom = new DOMDocument();
+		if (@$dom->loadHTMLFile($url) === false) {
+		    echo "Failed to load HTML from provided URL.";
+		    exit;
+		}
+
 		if ($dom != '' && @$dom->loadHTMLFile($url)) {
 			
 			$finder = new DomXPath($dom);
@@ -13,6 +22,11 @@
 			
 			$klasa="scoreA";
 			$prvi = $finder->query("//div[contains(@class, '$klasa')]");
+
+			$periods = $finder->query("//div[contains(@class, 'scoreA')]//span[contains(@class, 'period')]");
+			foreach ($periods as $period) {
+			    $periodValues[] = $period->nodeValue;
+			}
 			
 			foreach ($prvi as $p)
 			{
